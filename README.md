@@ -9,6 +9,10 @@ Vue.js T9N plugin
 - Translation data set can be represented as relational model
 - Regexp support
 
+## Demo
+
+- [Codepen](https://codepen.io/Ni55aN/pen/MzLgvo)
+
 ## Getting started
 
 ```js
@@ -29,10 +33,10 @@ Dataset example:
 
 ```js
 [
-    ['1 день', {en: '$1 day', ua: '$1 день'}],
+    ['1 день', {en: '1 day', ua: '1 день'}],
     [/^([2-4]) дня$/, {en: '$1 days', ua: '$1 дні'}],
     [/^(\d*) дней$/, {en: '$1 days', ua: '$1 днів'}],
-    ['плагин', {en: "plugin", ua: 'плагін'},'sectionID']
+    ['плагин', {en: "plugin", ua: 'плагін'},'sectionid'] // section name in lowercase
 ]
 ```
 
@@ -45,7 +49,7 @@ Component's template:
 ```
 
 ```html
-<div id="app" v-t9n.sectionID>
+<div id="app" v-t9n.sectionid>
     <p>плагин</p>
     <div>1 день</div>
 </div>
