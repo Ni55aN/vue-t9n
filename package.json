@@ -1,0 +1,29 @@
+{
+  "name": "vue-t9n",
+  "version": "1.0.0",
+  "description": "Vue.js Translation plugin",
+  "main": "build/vue-t9n.min.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "microbundle",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ni55aN/vue-t9n.git"
+  },
+  "keywords": [
+    "localization",
+    "internationalization",
+    "translation"
+  ],
+  "author": "Ni55aN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ni55aN/vue-t9n/issues"
+  },
+  "homepage": "https://github.com/Ni55aN/vue-t9n#readme",
+  "devDependencies": {
+    "microbundle": "^0.8.3"
+  }
+}
