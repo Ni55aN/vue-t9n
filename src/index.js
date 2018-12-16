@@ -17,11 +17,11 @@ export default {
         Vue.prototype.$t = text => translator.replaceSentences(text);
         Vue.prototype.$setTranslations = function(list) {
             translator.setTranslations(list);
-            deepComponentChild(this, c => c.$forceUpdate())
+            deepComponentChild(this.$root, c => c.$forceUpdate())
         }
         Vue.prototype.$setLocale = function(locale) {
             translator.setLocale(locale);
-            deepComponentChild(this, c => c.$forceUpdate())
+            deepComponentChild(this.$root, c => c.$forceUpdate())
         }
     }
 }
