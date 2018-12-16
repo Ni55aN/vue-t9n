@@ -13,3 +13,9 @@ export function deepComponentChild(component, callback) {
 export function toObj(entries) {
     return entries.reduce((obj, item) => ({...obj, [item[0]]: item[1]}), {});
 }
+
+export function trim(text) {
+    let [_, start, content, end] = text.match(/^(\s*)(.*?)(\s*)$/);
+
+    return { content, start, end }
+}

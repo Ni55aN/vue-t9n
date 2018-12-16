@@ -1,4 +1,4 @@
-import { eachTextNode, toObj } from './utils';
+import { eachTextNode, toObj, trim } from './utils';
 
 export default class Translator {
     constructor() {
@@ -29,7 +29,11 @@ export default class Translator {
     replaceSentences(text, section) {
         return text
             .split(/\. +/g)
-            .map(s => this.replace(s.trim(), section))
+            .map(sentence => {
+                let { start, content, end } = trim(sentence);
+
+                return start+this.replace(content, section)+end;
+            })
             .join('. ');
     }
 
