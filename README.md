@@ -49,8 +49,18 @@ Component's template:
 ```
 
 ```html
-<div id="app" v-t9n.sectionid>
+<div id="app" v-t9n.deep="sectionid">
     <p>плагин</p>
     <div>1 день</div>
 </div>
 ```
+
+Function translation (in some cases)
+```html
+<div id="app">
+    <p>{{$t('плагин')}}</p>
+</div>
+```
+
+The `deep` modifier is required to do translations inside slots
+

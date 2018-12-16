@@ -37,10 +37,10 @@ export default class Translator {
             .join('. ');
     }
 
-    translateNode(vnode, section) {
+    translateNode(vnode, section, deep = false) {
         if(!this.translations) return;
 
-        eachTextNode(vnode, node => {
+        eachTextNode(vnode, deep, node => {
             let text = node.text;
             
             node.elm.nodeValue = this.replaceSentences(text, section)
