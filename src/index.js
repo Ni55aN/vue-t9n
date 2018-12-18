@@ -7,11 +7,11 @@ export default {
 
         Vue.directive(directive, {
             inserted(el, binding, vnode) {
-                translator.translateNode(vnode, binding.expression, binding.modifiers.deep)
+                translator.translateNode(vnode, binding.value, binding.modifiers.deep)
             },
             componentUpdated(el, binding, vnode) {
                 Vue.nextTick(() => { // wait for componentInstance initialization 
-                    translator.translateNode(vnode, binding.expression, binding.modifiers.deep);
+                    translator.translateNode(vnode, binding.value, binding.modifiers.deep);
                 });
             },
         });
