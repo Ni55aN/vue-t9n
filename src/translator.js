@@ -67,7 +67,7 @@ export default class Translator {
             }]
         })
 
-
+        this.sourceTranslations = list;
         this.translations = {
             defaults,
             sections: toObj(sections)

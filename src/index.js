@@ -1,5 +1,6 @@
 import Translator from './translator';
 import { deepComponentChild } from './utils';
+import { getLangs } from './stats';
 
 export default {
     install(Vue, { directive = 't9n' } = {}) {
@@ -25,5 +26,6 @@ export default {
             translator.setLocale(locale);
             deepComponentChild(this.$root, c => c.$forceUpdate())
         }
+        Vue.prototype.$getLangs = () => getLangs(translator.sourceTranslations)
     }
 }
