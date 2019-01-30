@@ -28,7 +28,7 @@ export default class Translator {
 
     replaceSentences(text, section) {
         return text
-            .split(/\. +/g)
+            .split(/\.\s+/g)
             .map(sentence => {
                 let { start, content, end } = trim(sentence);
 
