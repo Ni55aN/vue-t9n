@@ -1,6 +1,6 @@
 {
   "name": "vue-t9n",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Vue.js Translation plugin",
   "main": "build/vue-t9n.min.js",
   "module": "src/index.js",
