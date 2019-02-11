@@ -30,7 +30,8 @@ export function toObj(entries) {
 }
 
 export function trim(text) {
-    let [_, start, content, end] = text.match(/^([.:\s]*)(.*?)([.:\s]*)$/s);
-
+    const match = text.match(/^([.:\s]*)([\s\S]*?)([.:\s]*)$/);
+    const [_, start, content, end] = match;
+    
     return { content, start, end }
 }
