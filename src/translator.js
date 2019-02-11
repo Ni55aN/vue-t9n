@@ -31,8 +31,9 @@ export default class Translator {
             .split(/\.\s+/g)
             .map(sentence => {
                 let { start, content, end } = trim(sentence);
+                let singleLineSentence = content.replace(/\s*\n+\s*/g, ' ')
 
-                return start+this.replace(content, section)+end;
+                return start+this.replace(singleLineSentence, section)+end;
             })
             .join('. ');
     }
